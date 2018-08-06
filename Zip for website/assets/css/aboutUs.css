@@ -1,0 +1,30 @@
+body {
+    background-color: #24ABE3 ;
+}
+
+#main {
+    background-color: #24ABE3;
+    margin: 0% 5% 0% 5%;
+    height: 550px;
+    border-style: solid;
+    
+    
+}
+
+.col-10 {
+    height: 100px;
+    width: 70%;
+}
+
+h1 {
+    font-size: 100px;
+    margin-top: .5%;
+    font-weight: 500;
+    margin-bottom: -1.75%;
+    margin-left: 2%;
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar{
+    border-radius: 5px
+}

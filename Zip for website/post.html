@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123331759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123331759-1');
+</script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/post.css" type="text/css" />
+    <title>Create a Post</title>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCOsoJyLF2aS9bNN0zGtM5tCBlMhPEb7Ts",
+            authDomain: "ipensio-a7015.firebaseapp.com",
+            databaseURL: "https://ipensio-a7015.firebaseio.com",
+            projectId: "ipensio-a7015",
+            storageBucket: "ipensio-a7015.appspot.com",
+            messagingSenderId: "432781606928"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <section id="header">
+
+            <!-- Logo -->
+            <h1><a href="index.html">IPensio</a></h1>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul id='headText'>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="listings.html">Browse Listings</a></li>
+                    <li class="current"><a href="post.html">Post Item</a></li>
+
+
+                </ul>
+            </nav>
+
+        </section>
+
+        <!-- Main -->
+        <section id="main">
+            <div class="container" id='holder'>
+                <input id='postingTitle' type="text" name="Title" placeholder='Title/Instrument Name' />
+                <form action='#' method="get">
+                    <select id="Catagory">
+                <option value="Winds">Winds</option> 
+                <option value="Percussion">Percussion</option>
+                <option value="Guitar">Guitar</option>
+                <option value="String">String</option>
+                <option value="Accessories">Accessories</option>
+                <option value="DJ equipment">DJ equipment</option>
+                
+                
+
+              </select>
+                </form>
+
+
+            </div>
+
+
+            <div class="form-group">
+                <textarea type="password" class="form-control" id="postingDescription" rows="13" placeholder="A brief description of your item, including the condition it's in"></textarea>
+            </div>
+            <div id='fileUpload'>
+                <input type='file' name='myFile' id='file'>
+                <button id='upload'>Upload</button>
+            </div>
+
+            <img id='image' src='' style='width: 20rem' />
+
+
+            <div id='costInput'>
+                <div id='dayCost'>
+                    <h5>Price per day</h5>
+                    <input type="number" name="dayPrice" min='1' max='10000' id='dayPrice' />
+                </div>
+
+                <div id='weekCost'>
+                    <h5>Price per week</h5>
+                    <input type="number" name="weekPrice" min='1' max='10000' id='weekPrice' />
+                </div>
+
+
+                <div id='monthCost'>
+                    <h5>Price per month</h5>
+                    <input type="number" name="monthPrice" min='1' max='10000' id='monthPrice' />
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <button type="button" class="btn btn-primary btn-lg" id='submitButton'>Submit</button>
+
+
+
+
+            <script type="text/javascript" src="assets/js/post.js"></script>
+</body>
+
+
+
+</html>

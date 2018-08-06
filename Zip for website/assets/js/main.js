@@ -3,6 +3,19 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+// let viewPostings = document.querySelector('#listings')
+
+// console.log(viewPostings)
+// viewPostings.addEventListener('click', ()=>{
+// 	firebase.auth().onAuthStateChanged(function(user) {
+//     if (user) {
+//         window.location = 'post.html'
+//     }
+//     else {
+//         alert('Please sign in to view this page')
+//     }
+// });
+// })
 
 (function($) {
 

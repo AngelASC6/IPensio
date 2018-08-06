@@ -1,0 +1,9 @@
+Milestone 1. Get auth working and put about us in
+milestone 2. Create posting  w/ photo upload
+Milestone 3. Create a searchable postings page and add filter
+        Who poosted it
+        When they posted it /
+        The type of instrument /
+        The name of the instrument /
+        Item description
+        Prices /

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--Basing off of insagram sign up-->
+<html>
+
+<head>
+    <title>Renter Sign Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script type="text/javascript" src="assets/js/renter-log-in.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCOsoJyLF2aS9bNN0zGtM5tCBlMhPEb7Ts",
+            authDomain: "ipensio-a7015.firebaseapp.com",
+            databaseURL: "https://ipensio-a7015.firebaseio.com",
+            projectId: "ipensio-a7015",
+            storageBucket: "",
+            messagingSenderId: "432781606928"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</head>
+<link rel="stylesheet" href="assets/css/renterLog.css" />
+
+
+<body>
+
+    <div id="header">
+        <div class='container'>
+            <div class='row'>
+                <div class='col-4 offset-4'>
+                    <div id='signInBox'>
+                        <img id='logo' src="images/Logo.png"></img>
+                        <h5>Sign up to rent your instruments!</h5>
+
+                        <button id="googleLogInButton" onclick='signInWithGoogle()'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/768px-Google_%22G%22_Logo.svg.png" height = '25px'></img> Log In With Google
+                        </button>
+                        <h6>OR Sign up with your email</h6>
+
+                        <input type="text" name="email" class='input' placeholder='Email' id='emailInput' />
+
+
+                        <input type="password" name="password" class='input' placeholder='Password' id='passwordInput' />
+                        <button id='signUpButton' onclick='signUpWithEmail()'>Sign Up</button>
+
+                        <div class="alert alert-danger" role="alert">
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+                    <div id='logInBox'>
+                        <p>Already have an account? <a href="signIn.HTML">Log In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

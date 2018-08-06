@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/signIn.css" />
+<title>Log In</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCOsoJyLF2aS9bNN0zGtM5tCBlMhPEb7Ts",
+            authDomain: "ipensio-a7015.firebaseapp.com",
+            databaseURL: "https://ipensio-a7015.firebaseio.com",
+            projectId: "ipensio-a7015",
+            storageBucket: "ipensio-a7015.appspot.com",
+            messagingSenderId: "432781606928"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <div class='container'>
+            <div class='row'>
+                <div class='col-4 offset-4'>
+                    <div id='signInBox'>
+                        <img id='logo' src="images/Logo.png"></img>
+                        <h5>Log In</h5>
+
+
+                        <input type="text" name="email" class='input' placeholder='Email' id='emailInput' />
+
+
+                        <input type="password" name="password" class='input' placeholder='Password' id='passwordInput' />
+                        <button id='signUpButton' onclick='signInWithEmail()'>Sign In</button>
+
+                        <div class="alert alert-danger" role="alert">
+
+                        </div>
+
+
+
+
+
+                        <script type="text/javascript" src="assets/js/signIn.js"></script>
+</body>
+
+</html>
