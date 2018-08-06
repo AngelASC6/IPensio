@@ -44,6 +44,7 @@ function getPostings() {
 
 
 function searchContent() {
+    let useremail = user.email
     document.querySelector('#postings').innerHTML = ''
     let userInput = document.querySelector('#searchBar').value
     let catagoryInput = document.querySelector('#Catagory').value
@@ -75,26 +76,34 @@ function searchContent() {
 
 
     // Catagory Search
-    console.log(userInput)
+    // console.log(userInput)
     firebase.database().ref('/').once('value', (snapshot) => {
         let data = snapshot.val()
+        console.log(data)
         for (key in data) {
-                console.log(userInput)
-            if (data[key].postingCatagory == catagoryInput || data[key].title == userInput) {
-                console.log(userInput)
-                console.log(catagoryInput)
-                console.log(data[key].title)
+            // console.log(userInput)
+            console.log(key)
+            if (data[key].postingCatagory == catagoryInput || data[key].title.toLowerCase() == userInput) {
+                // console.log(userInput)
+                // console.log(catagoryInput)
+                // console.log(data[key].title)
                 results.innerHTML += `
-                        <div class="card" style="width: 35rem; margin-left: 12%; margin-top:3%;">
+            <div class="card" style="width: 35rem; margin-left: 12%; margin-top:3%;">
   <img class="card-img-top" src="${data[key].image}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">${data[key].title}</h5>
-    <p class="card-text">${data[key].postingCatagory}</br>${data[key].description}</p> 
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-
+    <p class="card-text">${data[key].postingCatagory} </br>${data[key].description}</p>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
   </div>
- </div>
-            `
+ </div>`
+
+                document.querySelector('.modal-body').innerHTML = `<p class="card-text"> Price per day:$ ${data[key].priceForDay}</p>
+     <p class="card-text">Price per week:$ ${data[key].priceForWeek}</p>
+   <p class="card-text">Price per month:$ ${data[key].priceForMonth}</p
+        <p class="card-text">Renter Email: ${useremail}</p>
+`
             }
         }
     })
