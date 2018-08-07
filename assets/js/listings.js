@@ -24,10 +24,10 @@ function getPostings() {
             <div class="card" style="width: 35rem; margin-left: 12%; margin-top:3%;">
   <img class="card-img-top" src="${data[key].image}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">${data[key].title}</h5>
+    <h5 style="font-size: 35px;" class="card-title">${data[key].title}</h5>
     <p class="card-text">${data[key].postingCatagory} </br>${data[key].description}</p>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
+  Learn More
 </button>
   </div>
  </div>`
