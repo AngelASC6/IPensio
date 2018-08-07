@@ -1,5 +1,5 @@
 let searchButton = document.querySelector('#searchButton')
-
+let user
 
 searchButton.addEventListener('click', () => {
     searchContent()
@@ -39,12 +39,12 @@ function getPostings() {
 `
         }
 
-    })
+    });
 }
 
 
 function searchContent() {
-    let useremail = user.email
+    
     document.querySelector('#postings').innerHTML = ''
     let userInput = document.querySelector('#searchBar').value
     let catagoryInput = document.querySelector('#Catagory').value
@@ -84,9 +84,9 @@ function searchContent() {
             // console.log(userInput)
             console.log(key)
             if (data[key].postingCatagory == catagoryInput || data[key].title.toLowerCase() == userInput) {
-                // console.log(userInput)
-                // console.log(catagoryInput)
-                // console.log(data[key].title)
+                console.log(userInput)
+                console.log(catagoryInput)
+                console.log(data[key].title)
                 results.innerHTML += `
             <div class="card" style="width: 35rem; margin-left: 12%; margin-top:3%;">
   <img class="card-img-top" src="${data[key].image}" alt="Card image cap">
@@ -94,7 +94,7 @@ function searchContent() {
     <h5 class="card-title">${data[key].title}</h5>
     <p class="card-text">${data[key].postingCatagory} </br>${data[key].description}</p>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
+  Learn More
 </button>
   </div>
  </div>`
