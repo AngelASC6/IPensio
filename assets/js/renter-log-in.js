@@ -30,7 +30,7 @@ function signUpWithEmail() {
             document.querySelector('#emailInput').value = ''
             document.querySelector('#passwordInput').value = ''
             window.location.href = "index.html";
-ss
+
         }).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
