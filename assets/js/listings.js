@@ -44,7 +44,14 @@ function getPostings() {
 
 
 function searchContent() {
-    
+    let useremail
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            useremail = user.email
+            console.log(useremail)
+        }
+    })
+
     document.querySelector('#postings').innerHTML = ''
     let userInput = document.querySelector('#searchBar').value
     let catagoryInput = document.querySelector('#Catagory').value
